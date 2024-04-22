@@ -1,0 +1,42 @@
+﻿@model ThisLinq.Models.ConnectionLink
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ConnectionLink</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Classes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Classes.ClassName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Courses)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Courses.CourseName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Students)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Students.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Teachers)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Teachers.FirstName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

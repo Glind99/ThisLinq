@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ThisLinq.Models.TeacherCourseViewModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teachers By Subject</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teachers By Subject</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Teacher Name</th>
+                <th>Course Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
+                    <td>@item.CourseName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
+
